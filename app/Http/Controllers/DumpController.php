@@ -12,6 +12,6 @@ class DumpController extends Controller
     ->setDbName(env('DB_DATABASE'))
     ->setUserName(env('DB_USERNAME'))
     ->setPassword(env('DB_PASSWORD'))
-    ->dumpToFile('bemo.sql');
+    ->dumpToFile(env('DUMPPATH').'/bemo.sql');
   }
 }
