@@ -17,7 +17,7 @@
             </div>
             <draggable class="cards" tag="ul" v-model="column.cards" v-bind="dragOptions"  @start="isDragging=true" @remove="onRemove(column.id)" @add="onAdd(column.id)">
                 <transition-group type="transition" :name="'flip-list'">
-                    <li class="card" v-for="(element, cardIndex) in column.cards" :key="cardIndex">
+                    <li class="card" v-for="(element) in column.cards">
                         {{element.title}}
                     </li>
                 </transition-group>
