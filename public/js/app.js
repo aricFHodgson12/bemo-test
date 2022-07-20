@@ -26308,14 +26308,18 @@ var render = function() {
                     _c(
                       "transition-group",
                       { attrs: { type: "transition", name: "flip-list" } },
-                      _vm._l(column.cards, function(element) {
-                        return _c("li", { staticClass: "card" }, [
-                          _vm._v(
-                            "\n                      " +
-                              _vm._s(element.title) +
-                              "\n                  "
-                          )
-                        ])
+                      _vm._l(column.cards, function(element, cardIndex) {
+                        return _c(
+                          "li",
+                          { key: "key-" + cardIndex, staticClass: "card" },
+                          [
+                            _vm._v(
+                              "\n                      " +
+                                _vm._s(element.title) +
+                                "\n                  "
+                            )
+                          ]
+                        )
                       }),
                       0
                     )
